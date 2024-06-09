@@ -6,6 +6,10 @@ public class Demo {
         ClientService clientService = new ClientService();
         long id = clientService.create("Nastya");
         System.out.println(id);
-        System.out.println(clientService.getById(1));
+        System.out.println(clientService.getById(id));
+
+        clientService.setName(id,"Dima");
+        System.out.println(clientService.getById(id));
+        clientService.deleteById(id);
     }
 }

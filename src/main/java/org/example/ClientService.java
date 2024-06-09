@@ -10,7 +10,9 @@ public class ClientService {
     private Connection connection;
     private PreparedStatement preparedStatement;
     private static final String CREATE = "INSERT INTO client (name) VALUES (?)";
-    private static final String GET_BY_ID = "SELECT name FROM client WHERE id = ?";
+    private static final String GET_BY_ID = "SELECT * FROM client WHERE id = ?";
+    private static final String UPDATE = "UPDATE client SET name = ? WHERE id = ?";
+    private static final String DELETE = "DELETE FROM client WHERE id = ?";
 
     public ClientService(){
         try {
@@ -41,24 +43,43 @@ public class ClientService {
         return result;
     }
     public String getById(long id){
-        String result;
+        String result = "0000";
         try{
             connection.setAutoCommit(false);
             preparedStatement = connection.prepareStatement(GET_BY_ID);
             preparedStatement.setLong(1, id);
-            preparedStatement.executeUpdate();
-            ResultSet resultSet = preparedStatement.getResultSet();
-            result = resultSet.getString(1);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                result = resultSet.getString(2);
+            }
+            connection.setAutoCommit(true);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
         return result;
     }
     void setName(long id, String name){
-
+        try {
+            connection.setAutoCommit(false);
+            preparedStatement = connection.prepareStatement(UPDATE);
+            preparedStatement.setString(1, name);
+            preparedStatement.setLong(2, id);
+            preparedStatement.executeUpdate();
+            connection.setAutoCommit(true);
+        }catch (SQLException e){
+            throw new RuntimeException(e);
+        }
     }
     void deleteById(long id){
-
+        try{
+            connection.setAutoCommit(false);
+            preparedStatement = connection.prepareStatement(DELETE);
+            preparedStatement.setLong(1, id);
+            preparedStatement.executeUpdate();
+            connection.setAutoCommit(true);
+        }catch (SQLException e){
+            throw new RuntimeException(e);
+        }
     }
     List<Client> listAll(){
         return null;
