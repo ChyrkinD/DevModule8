@@ -1,0 +1,12 @@
+
+	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8œ¢ëóÿ1J$2fcf8b71-f4d4-425f-b967-354958d7f062
+	java:S112&"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¢ëóÿ1J$2caa7ea1-e955-42a1-b7b6-97d1c4fb77b3
+	java:S1125"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¢ëóÿ1J$2cc110ee-042f-49ca-b42a-f2d16bba0f2b
+É
+java:S11869"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ßØúïøÿÿÿÿ8¢ëóÿ1J$52e2836b-cb5b-4d40-bb3c-9b54e2f5e97d
+É
+java:S1186<"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‰Ù„•üÿÿÿÿ8¢ëóÿ1J$9fe58b0b-c87a-4237-8857-6960546824d6
+
+java:S3252"HUse static access with "java.sql.Statement" for "RETURN_GENERATED_KEYS".(·ªìñşÿÿÿÿ8¤¢ëóÿ1J$556182db-33fb-416b-ad0e-63538b06df86
+n
+java:S1168@"+Return an empty collection instead of null.(¥¹ï8§¢ëóÿ1J$6ba81f28-00dd-43ef-8faa-d22bdc5489d6
