@@ -11,5 +11,7 @@ public class Demo {
         clientService.setName(id,"Dima");
         System.out.println(clientService.getById(id));
         clientService.deleteById(id);
+
+        System.out.println(clientService.listAll());
     }
 }

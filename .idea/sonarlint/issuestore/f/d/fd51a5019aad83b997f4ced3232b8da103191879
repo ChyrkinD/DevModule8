@@ -1,12 +1,17 @@
 
-	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¤ƒ¸ôÿ1J$1d3939f3-baf9-4ed5-805d-89f19364946f
-	java:S112("FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¤ƒ¸ôÿ1J$024ea990-af6f-40f2-9b9c-4519351b1ad7
-	java:S1129"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¤ƒ¸ôÿ1J$ef62fa9b-e3dd-45c0-a6fa-3eb7fa39b085
-	java:S112F"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¤ƒ¸ôÿ1J$ba596991-418f-4ead-9717-51edaaa5fae2
-	java:S112Q"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¤ƒ¸ôÿ1J$2759fc25-dbcf-48aa-a036-60528ce3fb28
+	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8®ƒ›€2J$338938cc-c91f-4680-9e3d-d584145ff6a9
+	java:S112."FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8®ƒ›€2J$5611194b-90cd-49c6-bb16-6f23f80d4aa0
+	java:S112@"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8®ƒ›€2J$c8785787-4120-4444-9bd4-9a89ba587687
+	java:S112L"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8®ƒ›€2J$fc426f22-0143-498c-bda2-ac2c30a12b9e
+	java:S112W"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¯ƒ›€2J$efe3d632-fb14-448c-b9c4-e711f3f86a68
+	java:S112h"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¯ƒ›€2J$81b25927-db8c-4ded-b0e8-5d22b47e2c0c
 
-java:S3252"HUse static access with "java.sql.Statement" for "RETURN_GENERATED_KEYS".(·ªìñşÿÿÿÿ8©ƒ¸ôÿ1J$a9098505-f624-4752-9c25-d38c3916d844
+java:S3252$"HUse static access with "java.sql.Statement" for "RETURN_GENERATED_KEYS".(·ªìñşÿÿÿÿ8´ƒ›€2J$85989914-6280-4448-bdd4-c9a3941c0a2e
 b
-java:S6905"Don't use the query "SELECT *".(î¯Ó•8«ƒ¸ôÿ1J$34fcbb81-1a8b-49da-a8c1-7d3aa039fc9d
-n
-java:S1168U"+Return an empty collection instead of null.(¥¹ï8­ƒ¸ôÿ1J$6833e71b-4f9d-4041-90a3-3bb124787385
+java:S6905"Don't use the query "SELECT *".(î¯Ó•8µƒ›€2J$6c3ea8dc-b3a4-406d-b8aa-2dabe8187996
+g
+java:S6905"Don't use the query "SELECT *".(”òü¨ûÿÿÿÿ8¸ƒ›€2J$600b15ef-6334-4f00-99a5-5f2a18fd9ca8
+t
+java:S1128",Remove this unused import 'java.io.IOError'.(ƒ¾Ğ§øÿÿÿÿ8¹ƒ›€2J$45fde8e3-30b2-4b48-b894-7ed0c3da2995
+x
+java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8¹ƒ›€2J$7e7f1cd3-eb6a-4b53-ad73-10cf1b04b3a3

@@ -1,9 +1,12 @@
 package org.example;
 
+import java.io.IOError;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ClientService {
@@ -13,6 +16,7 @@ public class ClientService {
     private static final String GET_BY_ID = "SELECT * FROM client WHERE id = ?";
     private static final String UPDATE = "UPDATE client SET name = ? WHERE id = ?";
     private static final String DELETE = "DELETE FROM client WHERE id = ?";
+    private static final String GET_LIST = "SELECT * FROM client";
 
     public ClientService(){
         try {
@@ -24,7 +28,9 @@ public class ClientService {
 
     public long create(String name){
         long result = 0;
-
+        if(name.length() <= 2 && name.length() >= 1000){
+            throw new IllegalArgumentException();
+        }
         try {
             connection.setAutoCommit(false);
             preparedStatement = connection.prepareStatement(CREATE,PreparedStatement.RETURN_GENERATED_KEYS);
@@ -43,7 +49,7 @@ public class ClientService {
         return result;
     }
     public String getById(long id){
-        String result = "0000";
+        String result = "";
         try{
             connection.setAutoCommit(false);
             preparedStatement = connection.prepareStatement(GET_BY_ID);
@@ -53,10 +59,10 @@ public class ClientService {
                 result = resultSet.getString(2);
             }
             connection.setAutoCommit(true);
+            return result;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        return result;
     }
     void setName(long id, String name){
         try {
@@ -82,6 +88,21 @@ public class ClientService {
         }
     }
     List<Client> listAll(){
-        return null;
+        List<Client> clientList = new ArrayList<>();
+
+        try{
+            connection.setAutoCommit(false);
+            preparedStatement = connection.prepareStatement(GET_LIST);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+                Client client = new Client();
+                client.setId(resultSet.getInt(1));
+                client.setName(resultSet.getString(2));
+                clientList.add(client);
+            }
+        }catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return clientList;
     }
 }
